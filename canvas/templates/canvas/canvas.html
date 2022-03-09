@@ -1,0 +1,38 @@
+{% extends "canvas/layout.html" %}
+
+{% block body %}
+<form>
+    {% csrf_token %}
+</form>
+<div id="main">
+    <div id="side">
+        <h2 id="name">{{name}}</h2>
+        <p>You can share and color with a friend or download the image.</p>
+        <input id="share" type="text" readonly>
+        <button onclick="copy()" style="margin: 5px;">Copy Link</button>
+        <button onclick="downloadImg()" style="margin: 5px;">Download</button>
+        <hr>
+        <hr>
+        <p>Pick a color a click a square to color it.</p>
+        <form id="colorSelect">
+            <label for="color">Color:</label>
+            <select id="color" name="color">
+                <option value="0">White</option>
+                <option value="1">Black</option>
+                <option value="2">Dark Grey</option>
+                <option value="3">Light Grey</option>
+                <option value="4">Red</option>
+                <option value="5">Orange</option>
+                <option value="6">Yellow</option>
+                <option value="7">Green</option>
+                <option value="8">Blue</option>
+                <option value="9">Pink</option>
+            </select>
+        </form>
+    </div>
+    <div id="content">
+        <div id="canvas">
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "canvas/layout.html" %}
+
+{% block body %}
+<div id="main">
+<div id="menu">
+    <ul>
+        <li><button><a href="{% url 'search' %}">» Search</a></button></li>
+        <li><button><a href="{% url 'new' %}">» New</a></button></li>
+    </ul>
+</div>
+</div>
+{% endblock %}

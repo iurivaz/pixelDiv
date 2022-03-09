@@ -1,0 +1,16 @@
+{% extends "canvas/layout.html" %}
+
+{% block body %}
+<h1>Search</h1>
+<form method="post" action="">
+    {% csrf_token %}
+    <input type="text" name="query1">
+    <button type="submit">Search</button>
+</form>
+<div id="searchResults">
+    {% if query1 %}Matching results for "{{query1}}":{{rows.count}}{% endif %}
+    {% for row in rows %}
+    <div><a href="{% url 'canvas' row.name %}">{{row.name}}</a></div>
+    {% endfor %}
+</div>
+{% endblock %}

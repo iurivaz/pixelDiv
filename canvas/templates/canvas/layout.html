@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>pixelDiv</title>
+    <link rel="stylesheet" href="{% static 'canvas/style.css' %}">
+    <script src="{% static 'canvas/script.js' %}"></script>
+    <!-- lib to convert div to image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+
+<body>
+    <div id="title">pixelDiv</div>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

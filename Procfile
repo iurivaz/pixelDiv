@@ -1,0 +1,1 @@
+web: gunicorn pixelDiv.wsgi --log-file -

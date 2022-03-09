@@ -1,0 +1,11 @@
+{% extends "canvas/layout.html" %}
+
+{% block body %}
+<h1>New Canvas</h1>
+<form method="post" action="">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Create</button>
+</form>
+<p><b>Note: </b>The name chosen by you will have some aditional numbers added in the end to prevent name repetition.</p>
+{% endblock %}
